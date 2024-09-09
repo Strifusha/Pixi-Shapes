@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixi MVC Project</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="stats">
+        <label>Shapes Count: <span id="shapeCount"></span></label>
+        <label>Surface Area: <span id="surfaceArea"></span> px²</label>
+
+        <label>Shapes per Sec: <span id="shapesPerSecondValue"></span></label>
+        <span id="maxShapes" class="max-label">max</span>
+
+        <label>Gravity: <span id="gravityValue"></span></label>
+        <span id="maxGravity" class="max-label">max</span>
+      </div>
+
+      <div id="controls">
+        <button id="decreaseShapes">-</button>
+        <span>Shapes/Sec</span>
+
+        <button id="increaseShapes">+</button>
+        <button id="decreaseGravity">-</button>
+
+        <span>Gravity</span>
+        <button id="increaseGravity">+</button>
+      </div>
+
+      <div
+        id="canvas-container"
+        role="main"
+        aria-label="Shape Animation Area"
+      ></div>
+    </div>
+
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>

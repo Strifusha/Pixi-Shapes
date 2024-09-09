@@ -1,0 +1,129 @@
+:root {
+  --primary-color: #2a2dc7;
+  --background-color: #f0f0f0;
+  --white-color: #ffffff;
+  --font-family: Arial, sans-serif;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --border-color: #ccc;
+  --border-radius: 5px;
+  --font-size: 14px;
+  --button-size: 40px;
+  --container-width: 800px;
+  --container-height: 500px;
+  --controls-margin: 20px;
+  --button-margin: 0 5px;
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  min-width: 600px;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--container-width);
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: var(--white-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  font-size: var(--font-size);
+  height: 60px;
+}
+
+#stats label {
+  margin: 5px;
+  flex: 1;
+  position: relative;
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--controls-margin);
+  gap: 15px;
+  flex-wrap: nowrap;
+}
+
+#controls button {
+  width: var(--button-size);
+  height: var(--button-size);
+  margin: var(--button-margin);
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#controls span {
+  margin: 0 15px;
+  font-size: var(--font-size);
+  flex: 1;
+  text-align: center;
+}
+
+#canvas-container {
+  overflow: hidden;
+  border-radius: 10px;
+  width: var(--container-width);
+  height: var(--container-height);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--white-color);
+  position: relative;
+}
+
+.max-label {
+  color: red;
+  visibility: hidden;
+}
+
+@media (max-width: 720px) {
+  #stats,
+  #controls {
+    flex-wrap: wrap;
+  }
+
+  #controls button {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (min-width: 720px) {
+  #stats {
+    justify-content: center;
+    text-align: center;
+  }
+
+  #controls {
+    flex-direction: row;
+  }
+
+  #controls span,
+  #controls button {
+    flex: 0 0 auto;
+  }
+}

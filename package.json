@@ -1,0 +1,19 @@
+{
+  "name": "pixishapes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "format": "prettier --write ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pixi.js": "^8.3.4"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "prettier": "^3.3.3"
+  }
+}
